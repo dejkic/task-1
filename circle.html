@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="border linear-animation"></div>
+    <div class="dot" onclick="reverseSpinner()">
+        <p>CLICK ME!</p>
+    </div>
+
+    <script>
+        function reverseSpinner() {
+            var x=document.getElementsByClassName("border")[0]
+            console.log(x);
+            if (x.classList.contains("linear-animation")) {
+                x.classList.remove("linear-animation")
+                x.classList.add("reverse-animation")
+            }
+            else {
+                x.classList.add("linear-animation")
+                x.classList.remove("reverse-animation")
+            }
+        }
+    </script>
+</body>
+</html>
